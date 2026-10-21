@@ -2,7 +2,7 @@
 name: vertical-os-builder
 description: Clone and adapt the existing Banking OS or Retail OS into another industry OS, preserving their sphere behavior, ring alignment, shared components, and reusable journey flows. Research and adapt departments, teams, agents, and journey architecture. Build each real demo journey as a separate task. Use for requests such as Healthcare OS, Insurance OS, or another vertical OS, not an unrelated dashboard or operating-system installation.
 metadata:
-  version: "0.4.7"
+  version: "0.4.8"
   status: "draft"
 ---
 
@@ -86,7 +86,7 @@ All agent logos/spheres stay bright, colorful and fully opaque across Agents, Jo
 
 Include an explicit Light/Dark control in the top-right app header. Default to Light, remember the user's choice across reloads with an app-specific storage key, and keep the appearance scoped to this app. Apply both themes consistently to the shell, Agents/Journeys/Org, passports, menus, details and other app pages using inherited semantic tokens. Keep complete names readable and every worker colorful in both modes. Make the control keyboard accessible and reachable at mobile widths. See the design reference for theme coverage and persistence checks.
 
-Keep the default app navigation focused on Agents, Journeys and Org within the inherited Tower experience. Omit the standalone Brief and Controls tabs/pages unless the user explicitly requests them. Keep the research workbook and source brief in the handoff, and show relevant ownership, policy and human-decision information in existing agent/journey details. This navigation simplification preserves working filters, appearance, zoom, motion and detail controls.
+Keep the default app navigation focused on Agents, Journeys and Org within the inherited Tower experience. Omit the standalone Brief and Controls tabs/pages unless the user explicitly requests them. When adapting or cleaning up an existing app, remove their navigation entries, imports, route/render branches and unused page components; hiding the tabs alone is insufficient. Keep the research workbook and source brief in the handoff, and show relevant ownership, policy and human-decision information in existing agent/journey details. This navigation simplification preserves working filters, appearance, zoom, motion and detail controls.
 
 Reuse the console shell, Inter typography, theme tokens, cards, connectors, gates, popups, pan/zoom, filters, Agents/Journeys/Org views, and passports. Compare the fork with the source at matching viewport and zoom to catch visual or behavioral drift. Preserve inherited case/work infrastructure if useful, without requiring new working journeys or surfacing irrelevant source-customer cases.
 

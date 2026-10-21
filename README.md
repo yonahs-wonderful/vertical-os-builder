@@ -65,4 +65,4 @@ For research or local work, replace Delivery with `research only` or `local buil
 
 This repository contains the skill, references and templates. The recipient also needs access to the actual Banking/Retail app source and sphere assets, plus the appropriate Wonderful environment for hosted delivery. Those apps, tenant credentials and machine-specific source locations are not bundled here. The skill directs the assistant to retrieve authorized source rather than rebuild a lookalike from screenshots.
 
-Portable release: **0.4.7**.
+Portable release: **0.4.8**.
