@@ -1,0 +1,66 @@
+# Vertical OS builder
+
+A Wonderful Code skill for adapting an existing Banking OS or Retail OS into another industry OS, such as Insurance OS or Healthcare OS.
+
+It preserves the original sphere assets, ring geometry, alignment, shared interactions and reusable journey components. It guides industry research, department/team/agent modeling, and a clickable catalog of proposed journeys. Implementing each real demo journey is a separate task.
+
+## Install in Wonderful Code
+
+Ask Wonderful Code to install this skill from this repository, or clone the complete repository into your Wonderful Code skills directory:
+
+```sh
+mkdir -p ~/.wonderful-code/skills
+git clone https://github.com/yonahs-wonderful/vertical-os-builder.git ~/.wonderful-code/skills/vertical-os-builder
+```
+
+If you configured a different Wonderful Code home, use its `skills/vertical-os-builder` directory instead. Start a new chat after installation. Keep the entire repository: `SKILL.md` uses the included references and assets.
+
+## Use
+
+Give the assistant an authorized source checkout or source app location, then use this brief:
+
+```text
+Use $vertical-os-builder to create Insurance OS.
+Industry scope: US property & casualty insurance.
+Source OS: Retail OS.
+Source app or checkout: <authorized app URL, repository, or local source directory>.
+Target environment/tenant: <destination name>.
+Target workspace: <destination workspace>.
+App: Insurance OS / insurance-os (new).
+Delivery: create, publish and activate.
+
+Clone the existing source and preserve sphere behavior, alignment and shared
+interactions. Complete the research workbook and adapt the departments,
+agents and journey architectures. Keep real demo journeys as separate tasks.
+```
+
+For research or local work, replace Delivery with `research only` or `local build/preview`.
+
+## Included requirements
+
+- Complete readable names, with no clipped letters.
+- Bright, colorful agent spheres across views, filters and Planned status.
+- Calm agent maps: connection lines and slow traveling dots appear only on agent hover or selection, with reduced-motion support.
+- A top-right Light/Dark choice that remembers the preference and themes the whole app.
+- Actual source reuse, consistent shared views, and truthful Planned/Active journey status.
+- A substantive industry research workbook, evidence coverage, and a source-to-target reuse map.
+
+## Contents
+
+| Path | Purpose |
+| --- | --- |
+| [SKILL.md](SKILL.md) | Main workflow and requirements |
+| [references/source-map.md](references/source-map.md) | Portable source setup and implementation landmarks |
+| [references/research-and-model.md](references/research-and-model.md) | Research and industry-fit guidance |
+| [references/design-and-motion.md](references/design-and-motion.md) | Layout, color, themes and interaction rules |
+| [references/acceptance.md](references/acceptance.md) | Completion checks and review prompts |
+| [assets/launch-brief.md](assets/launch-brief.md) | Reusable launch prompt |
+| [assets/industry-research-workbook.md](assets/industry-research-workbook.md) | Research workbook template |
+| [assets/design-tokens.css](assets/design-tokens.css) | Light-theme comparison tokens |
+| [agents/openai.yaml](agents/openai.yaml) | Skill display metadata and default prompt |
+
+## Source access
+
+This repository contains the skill, references and templates. The recipient also needs access to the actual Banking/Retail app source and sphere assets, plus the appropriate Wonderful environment for hosted delivery. Those apps, tenant credentials and machine-specific source locations are not bundled here. The skill directs the assistant to retrieve authorized source rather than rebuild a lookalike from screenshots.
+
+Portable release: **0.4.5**.
