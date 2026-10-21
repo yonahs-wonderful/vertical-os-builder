@@ -42,6 +42,8 @@ Check idle, hover, selection, journey/department filters and viewer-scope change
 
 ## Preserve the Retail navigation fixes
 
+Default to the inherited Tower experience with Agents, Journeys and Org. Do not include standalone Brief or Controls tabs/pages unless explicitly requested. Remove inherited links to omitted pages and handle stale saved navigation by returning to a valid main view. Keep research/source documentation in the handoff; retain relevant policy, ownership and human-decision information in existing details. Appearance, filters, zoom, motion and detail controls remain available.
+
 Selected journeys pack together sequentially with gaps based on actual content height; removing a middle journey closes the gap. Fit frames the visible selection rather than hidden catalog space. Reuse this implementation.
 
 Journey details start compact and support expand, collapse, open beside map, dock, close, Escape and sensible focus restoration. Preserve an independently usable scrolling list. At narrow widths use the inherited responsive layout rather than squeezing the side pane into unreadable text.
