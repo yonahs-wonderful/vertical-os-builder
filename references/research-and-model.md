@@ -54,7 +54,21 @@ For every department record its mission, owner role, teams, core activities, cri
 
 Translate work into proposed agent roles only after understanding it. Map business activities to agent capabilities, parent-agent skills, shared specialists and human decision boundaries. Do not create one AI worker for every employee title. Justify proposed role counts by process breadth and specialist needs rather than presenting them as actual headcount.
 
-Output: a department/team/ownership matrix with evidence and sizing rationale. Feed it into the source OS's existing proportional-sector and positioning logic.
+### Allocate the workforce by business importance
+
+Size the workforce from the industry's value chain before filling department slots. A full industry OS should visibly concentrate specialist coverage where the business creates and delivers its product or service. Giving every department four agents, or another repeated quota, hides those priorities and is not an acceptable default.
+
+1. Classify departments as **core business**, **enabling**, or **corporate support**, and identify the primary core departments. Explain each classification from its mission, customer/service or revenue impact, operational criticality, process breadth, exceptions and specialist decision boundaries. Use volumes only when evidenced; do not fabricate traffic or employee counts to justify importance.
+2. Research core journeys first, then identify distinct workers needed across their stages and exceptions. Allocate substantially more specialist roles to the primary core departments. Reuse the same specialist across journeys; a skill, human gate or repeated journey appearance is not another worker.
+3. Keep enabling and corporate support departments proportionate and compact. Group closely related capabilities into parent-agent skills and use shared specialists where responsibilities fit. The obligation to include HR, Finance or Legal does not mean they deserve the same number of workers as the main business.
+4. Check the proposed distribution using unique workers: core business collectively holds more than half of the workforce; each primary core department has at least twice as many agents as any individual non-core department by default; and HR has strictly fewer agents than every core business department. The 2:1 rule is a design sanity check for substantial differentiation, not a claim about actual staffing or an automatic generator of roles. A near-even split such as five core agents versus four support agents does not meet that default.
+5. If the distribution fails, revisit missing core workflow coverage, duplicate support roles, overly narrow worker definitions and mistaken classifications. Do not pad departments, relabel a support function as core, or invent specialists merely to pass the count checks. Record unresolved gaps as provisional rather than claiming the allocation is complete. An explicitly narrower user-requested scope takes precedence; a full-vertical launch does not imply such an exception.
+
+For a telecom operator, network planning/buildout, network operations and assurance, service provisioning/activation, product/revenue operations and customer service journeys are candidates for core coverage, depending on the segment. Internal employee IT, HR and general procurement are supporting functions. Network operations must not be reduced to a small generic IT department while HR receives the same or more workers. These are classification examples, not a fixed department list or count template; a carrier, MVNO, infrastructure operator and equipment supplier need different models.
+
+Record department classification, primary-core designation, importance rationale, distinct covered work, proposed count and share, consolidated skills, and sources/assumptions in a workforce allocation table. Report core versus non-core totals, the smallest primary core department versus the largest non-core department, and HR versus every core department. Use those counts in Agents, Org and filters, and feed them into the inherited proportional-sector geometry. Do not equalize ring sectors or add decorative workers to obtain symmetry.
+
+Output: a department/team/ownership matrix and workforce allocation table with evidence and sizing rationale, plus the distribution check results. Feed them into the source OS's existing proportional-sector and positioning logic.
 
 ## 5. Research journeys stage by stage
 
@@ -134,7 +148,7 @@ Walk the architecture from the perspective of a front-line operator, function ow
 Complete research when:
 
 - The segment/business model and value chain are explicit, with core operations and relevant corporate functions covered.
-- Departments have credible missions, ownership and work-based role-sizing rationale.
+- Departments have credible missions, ownership and importance-based role-sizing rationale. Core operations dominate the proposed workforce; primary core departments are substantially larger than individual support functions, HR is smaller than every core department, and allocation checks are recorded.
 - Proposed journeys have stage-level substance, records, decisions, exceptions, outcomes and traceable support.
 - Industry-common practices and named-customer facts remain separate.
 - Important systems and consequential boundaries have credible support or visible provisional gaps.

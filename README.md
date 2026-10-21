@@ -43,6 +43,7 @@ For research or local work, replace Delivery with `research only` or `local buil
 - Calm agent maps: connection lines and slow traveling dots appear only on agent hover or selection, with reduced-motion support.
 - A top-right Light/Dark choice that remembers the preference and themes the whole app.
 - Actual source reuse, consistent shared views, and truthful Planned/Active journey status.
+- Workforce sizing follows business importance: core operations receive the majority of agents, primary core departments are at least twice individual support departments by default, and HR stays smaller than every core department. Equal quotas per department are rejected.
 - A substantive industry research workbook, evidence coverage, and a source-to-target reuse map.
 
 ## Contents
@@ -63,4 +64,4 @@ For research or local work, replace Delivery with `research only` or `local buil
 
 This repository contains the skill, references and templates. The recipient also needs access to the actual Banking/Retail app source and sphere assets, plus the appropriate Wonderful environment for hosted delivery. Those apps, tenant credentials and machine-specific source locations are not bundled here. The skill directs the assistant to retrieve authorized source rather than rebuild a lookalike from screenshots.
 
-Portable release: **0.4.5**.
+Portable release: **0.4.6**.

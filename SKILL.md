@@ -2,7 +2,7 @@
 name: vertical-os-builder
 description: Clone and adapt the existing Banking OS or Retail OS into another industry OS, preserving their sphere behavior, ring alignment, shared components, and reusable journey flows. Research and adapt departments, teams, agents, and journey architecture. Build each real demo journey as a separate task. Use for requests such as Healthcare OS, Insurance OS, or another vertical OS, not an unrelated dashboard or operating-system installation.
 metadata:
-  version: "0.4.5"
+  version: "0.4.6"
   status: "draft"
 ---
 
@@ -56,7 +56,9 @@ Build an evidence coverage matrix, source register, department/team map, archite
 
 Keep facts, inferences, assumptions and proposed AI roles distinct. Separate industry-common practices from verified customer facts. Triangulate important claims and resolve or record conflicting evidence. Do not claim industry fit when a critical process, system or decision boundary remains unverified; deliver the affected area as provisional and continue independent work.
 
-Explicitly consider Finance and Legal, plus relevant People/HR, IT, Risk/Compliance, Procurement, Security and Data. Reuse existing support-function flows when the work fits. Size proposed agent teams from process breadth and specialist needs rather than inventing employee counts; preserve the existing variable-sector ring algorithm.
+Explicitly consider Finance and Legal, plus relevant People/HR, IT, Risk/Compliance, Procurement, Security and Data. Reuse existing support-function flows when the work fits. Allocate agents by business importance, supported process breadth and specialist needs; do not assign an equal quota such as four agents per department or invent employee counts.
+
+For a full industry OS, identify the core value-producing departments before sizing teams. Give core operations a clear majority of unique agents and make primary core departments substantially larger than individual enabling or corporate support departments. Use at least a 2:1 primary-core-to-support count as the default design check. HR must have fewer agents than every core business department. Keep support coverage compact by putting related capabilities into skills or genuinely shared specialists. In telco, network operations and service delivery are core business, not generic internal IT; classify functions from the business model rather than their names. Record classifications, counts, shares and work-based reasons in the workbook. Reject uniform or support-heavy allocations and revise the coverage without padding the core with invented roles. Preserve the existing variable-sector ring algorithm so real differences in workforce size remain visible. See the research reference for allocation checks.
 
 Apply the research completion criteria and industry-fit tests in the reference before marking the architecture researched. The goal is evidence coverage and credible process detail, not a fixed number of web pages or journeys.
 

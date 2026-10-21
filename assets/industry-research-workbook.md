@@ -52,6 +52,25 @@ Use substantiated, partial or unresolved to describe each area. Identify what wo
 
 Explicitly account for Finance and Legal and explain relevant shared services or omissions. Role counts describe proposed agent coverage, not employee staffing.
 
+## Workforce allocation by business importance
+
+Classify and prioritize departments before assigning counts. Core operations should dominate the workforce; do not distribute an equal quota across departments. Explain importance through the value chain, business/service impact, criticality and distinct workflow coverage. Separate proposed design choices from known operational facts.
+
+| Department | Core / enabling / corporate support | Primary core? | Importance and distinct work requiring specialists | Unique proposed agent count | Share of total | Capabilities consolidated into skills/shared roles | Evidence or explicit assumption |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+
+Count each canonical worker once, excluding skills, human gates and repeated appearances in journeys. Record these checks for a full industry OS:
+
+| Distribution check | Counts/calculation and result | Coverage revision or unresolved gap |
+| --- | --- | --- |
+| Core business collectively has a clear majority | Core count / total; greater than 50% | |
+| Each primary core department substantially exceeds each individual non-core department | Smallest primary core count / largest enabling or corporate support count; at least 2:1 by default | |
+| HR is smaller than every core business department | HR count versus each core department; strictly fewer in every comparison | |
+| No equal-per-department quota or symmetry padding | Explain meaningful size differences and merged/removed duplicate roles | |
+| Canonical counts agree with the visible architecture | Agents, Org, filters and proportional ring sectors reflect the allocation | |
+
+Treat the 2:1 comparison as a proposed design check, not a staffing fact or permission to invent roles. Research missing core work and consolidate overlapping support roles when checks fail; keep unresolved allocations provisional. For telco, distinguish core network/service operations from internal employee IT and corporate support. Record an explicitly narrower user-requested scope if it changes which business is being modeled.
+
 ## Journey catalog and priority
 
 | Journey | Actor/trigger | Owner | Business relevance and priority rationale | Intended outcome/KPI definition | Source flow | Evidence/confidence | Status |

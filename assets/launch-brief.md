@@ -11,6 +11,7 @@ App: Insurance OS (new slug: insurance-os).
 Delivery: <local build/preview OR create, publish and activate in the named target>.
 
 Clone the existing Banking/Retail source. Preserve sphere behavior, alignment and shared interactions; reuse suitable flows. Complete the in-depth research workbook and adapt the departments, agents and journey architectures. Keep real demo journey implementation as separate tasks.
+Allocate agents by business importance and distinct workflow coverage, not equal quotas per department. Core business gets a clear majority; primary core departments should have at least twice the agents of individual support departments by default. HR must be smaller than every core department. Document the classification, counts and rationale, consolidate support capabilities into skills, and let the inherited ring reflect the real size differences.
 Render complete names with no clipped letters. Keep all agent logos bright and colorful across views and filters, including Planned roles. On the Agents page, show connection lines and slow traveling dots only when an agent is hovered or clicked/selected; keep the page calm at rest. Preserve truthful status and reduced-motion support.
 Add a Light/Dark control in the top right, default to Light, and remember the choice across reloads. Theme every app view and detail surface consistently, keep the setting scoped to the app, and preserve complete names, colorful spheres and calm connections in both modes.
 ```
