@@ -30,7 +30,7 @@ Verify both modes at desktop, shared-screen and mobile widths. Change the theme,
 
 Render every intended department, team and agent label completely. Missing leading/trailing letters, overlapping names and fragments such as `OURCIN` for `SOURCING` are unacceptable. Tooltips or correct DOM text do not compensate for clipped visible text. An intentional, meaningful short department name may be used consistently; do not silently abbreviate a name to hide a layout defect or shrink it until unreadable.
 
-For a curved department label, size its invisible text guide independently of the colored sector arc. Small departments still need enough guide length for the full name. A centered semicircle at the inherited label radius and reading direction is one proven fix: preserve the sector midpoint, colored arc, sphere angles and positions. Check neighboring label extents and canvas bounds after extending guides; keep labels attached to their original departments.
+For a curved department label, size its invisible text guide independently of the colored sector arc. Small departments still need enough guide length for the full name. Use a centered semicircle guide with the inherited reading direction. Match the visible letter-to-arc gap, not baseline radii: compensate flipped lower-half text using loaded-font ascent/descent (about 5 SVG units of clear gap). Preserve each sector midpoint and sphere positions. Check neighboring label extents and canvas bounds after extending guides; keep labels attached to their original departments.
 
 Verify the actual rendered first and last letters of every label at desktop, shared-screen and mobile sizes, with fonts loaded and at the normal fit view. Inspect screenshots and SVG character extents where available (`getNumberOfChars`, `getExtentOfChar`, `getComputedTextLength`, and path `getTotalLength`). Flag zero-size non-space glyphs, text longer than its guide, collisions and clipped bounds. Check names in Org and journey cards as well as the ring; provide enough space for complete names.
 
@@ -48,7 +48,7 @@ Selected journeys pack together sequentially with gaps based on actual content h
 
 Journey details start compact and support expand, collapse, open beside map, dock, close, Escape and sensible focus restoration. Preserve an independently usable scrolling list. At narrow widths use the inherited responsive layout rather than squeezing the side pane into unreadable text.
 
-Every imported journey uses the shared card, connector, zoom and popup renderer. Skill and Human gate labels remain explicit. Preserve the Active/Planned distinction and compute working-journey counts from valid implemented capability.
+Every imported journey uses the shared card, connector, zoom and popup renderer. Skill and Human gate labels remain explicit. Keep the persisted eight-journey demo Active set distinct from implementation readiness; compute working-journey counts only from verified implementations.
 
 ## Motion refinements within this skill
 
@@ -62,7 +62,7 @@ First copy and inspect the existing motion unchanged. Then refine the shared com
 | Panels | Existing compact details and popups | More responsive transitions and restrained elevation |
 | Stage | Existing neutral canvas and layers | Subtle depth that preserves legibility and spatial stability |
 
-Prototype a refinement on one existing architecture view, inspect it in motion, and apply the shared change consistently. Do not rotate or reorganize the whole ring, detach labels from their spheres, or replace familiar interactions with a new visual system.
+Prototype a refinement on one existing architecture view, inspect it in motion, and apply the shared change consistently. Distribute short department names between longer ones without changing sector membership, colors or proportional sizing. Keep labels attached and preserve familiar interactions.
 
 Hovered/selected-path animation illustrates the architecture without building case execution. Keep signals slow and restrained: target roughly one quarter of the original traversal speed, with a minimum four-second duration even on short paths. Animate only the focused agent's existing links while keeping every worker sphere colorful. Filters may organize/highlight workers without starting connection motion. Retain meaningful labels and avoid showing invented traffic, queue counts, approvals, revenue or completed cases. It is presentation motion, not proof that the journey runs.
 

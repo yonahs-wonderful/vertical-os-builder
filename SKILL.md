@@ -2,7 +2,7 @@
 name: vertical-os-builder
 description: Clone and adapt the existing Banking OS or Retail OS into another industry OS, preserving their sphere behavior, ring alignment, shared components, and reusable journey flows. Research and adapt departments, teams, agents, and journey architecture. Build each real demo journey as a separate task. Use for requests such as Healthcare OS, Insurance OS, or another vertical OS, not an unrelated dashboard or operating-system installation.
 metadata:
-  version: "0.4.8"
+  version: "0.4.9"
   status: "draft"
 ---
 
@@ -72,7 +72,7 @@ Keep source application data shapes and generators where sound. Derive Agents, J
 
 Keep **Agent**, **Skill**, **Human gate**, **System**, and **Policy check** distinct. A Skill belongs to an agent and does not inflate worker counts. Label **Skill** and **Human gate** explicitly on cards and popups. Describe the human decision boundary in the architecture; implementing its runtime behavior belongs to that journey's separate demo task.
 
-Each architecture entry needs a trigger/business actor, owner, relevant stages and agents, skills/systems, proposed decision points, and intended outcome. This is a researched map and brief, not a scripted execution scenario. Mark new entries **Planned** until their real journey has been built and checked separately. Preserve an existing **Active** journey only when the reused capability genuinely remains valid in the new context; copying its diagram alone does not make it active.
+Each architecture entry needs a trigger/business actor, owner, relevant stages and agents, skills/systems, proposed decision points, and intended outcome. This is a researched map and brief, not a scripted execution scenario. Keep implementation readiness **Planned** until built and checked. For demo catalogs, randomly select eight journeys once (all if fewer), persist their IDs, and show them as **Active** architecture previews. Keep presentation status separate from readiness; derive badges, details, filters and totals from that saved selection.
 
 When bringing in an existing customer architecture, preserve its meaningful agents, skills, branches, systems, and gates, and render it through the inherited common journey components.
 
@@ -80,7 +80,7 @@ When bringing in an existing customer architecture, preserve its meaningful agen
 
 Read [references/design-and-motion.md](references/design-and-motion.md). Reuse the actual sphere assets and component code, sizes, relative positioning, rings, sector spacing, label placement, connected highlights, hover/selection behavior, and animations. Preserve the calculation of sphere positions and their alignment to one another. Let the original data-driven geometry accommodate a changed department/agent count.
 
-Complete names are a release requirement. No department, team or agent name may lose letters through SVG text-path clipping, masks, container bounds or overlap. A fragment such as `OURCIN` in place of `SOURCING` is unacceptable. Fit the complete intended label while retaining sphere positions and sector alignment; verify first and last letters at desktop, shared-screen and mobile widths. See the design reference for text-guide fixes and checks.
+Complete names are a release requirement. No department, team or agent name may lose letters through SVG text-path clipping, masks, container bounds or overlap. A fragment such as `OURCIN` in place of `SOURCING` is unacceptable. Fit the complete intended label while retaining sphere positions and sector alignment; verify first and last letters at desktop, shared-screen and mobile widths. Use short, distinct department names such as Legal and Security. Separate short names and small departments around the ring, keeping workers and colors with their sector. Keep visible letters equally close to the sector arc; see the design reference for text-guide and baseline corrections.
 
 All agent logos/spheres stay bright, colorful and fully opaque across Agents, Journeys, Org and details. Planned/proposed status, lack of implementation, selection, filters and viewer scope must not gray out or desaturate workers. Use the inherited colored assets, replace gray/silver worker assignments, and keep each agent's color identity consistent across views. Preserve truthful status text and scope/access behavior; visual brightness does not make a journey Active.
 
@@ -92,7 +92,7 @@ Reuse the console shell, Inter typography, theme tokens, cards, connectors, gate
 
 Keep the Retail refinements: sequentially packed selected journeys with no empty catalog gaps; compact details by default; clear expand/collapse, side-panel, dock, close and Escape controls; stable list scrolling and page position; and one consistent imported-journey format.
 
-Use **Active** and **working journeys** where existing implemented capability warrants them, with computed counts. New architecture previews stay **Planned**. Do not label copied architecture or presentation animation as a functioning demo or live integration.
+Compute Active/Planned totals from catalog status. Reserve **working journeys** for verified implementations; Active demo labels and animation do not establish runnable cases or live integrations.
 
 ## 5. Refine the inherited motion
 

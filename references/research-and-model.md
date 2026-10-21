@@ -163,4 +163,4 @@ Deliver one readable research workbook containing scope, industry/value-chain br
 
 Adapt the existing canonical data model rather than adding a new framework. Resolve stable IDs across departments/teams, agents, parent-agent skills, journeys, gates and systems. Derive views, passports, ownership filters and counts from those records. Reuse specialist identity across journeys; keep proposed roles distinct from verified customer staffing.
 
-New researched journey architectures remain Planned. Preserve Active only for existing implemented capability that remains valid and has been checked in context. Actual cases, conversations, integrations, replay/decision engines and audit history belong to each journey's separate demo-preparation task and are not research-completion requirements.
+New researched journeys retain Planned implementation readiness. A fixed eight-journey Active demo selection is catalog presentation only; verified working capability remains separate. Actual cases, conversations, integrations, replay/decision engines and audit history belong to each journey's separate demo-preparation task and are not research-completion requirements.
