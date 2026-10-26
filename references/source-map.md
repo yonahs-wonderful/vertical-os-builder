@@ -1,6 +1,6 @@
 # Design baseline and source map
 
-Local source inspected and hosted locators updated on 2026-10-21. The Banking URL below was supplied by the user; its deployed revision has not been compared with the local checkout. Resolve source and revision again before a new build. Source apps remain read-only during a fork.
+Retail Work and Tower connector source were inspected against active Retail OS 1.0.77 on 2026-10-26. Earlier local source locators were recorded on 2026-10-21. The Banking URL below was supplied by the user; its deployed revision has not been compared with the local checkout. Resolve source and revision again before a new build. Source apps remain read-only during a fork.
 
 ## Locate the originals
 
@@ -10,7 +10,7 @@ The originating project root on Yonah's machine is:
 
 | Reference | Location within that root | Purpose |
 | --- | --- | --- |
-| Latest inspected Retail OS | `retail-os/` | Default clone base and interaction implementation; package version 1.0.11 at inspection |
+| Earlier inspected Retail OS | `retail-os/` | Historical local implementation; package version 1.0.11 at that inspection. Retrieve the selected current hosted source for newer Work/navigation/connector refinements. |
 | Banking OS — NAB demo / Trusted Workforce Console | `research/nab/agentic-bank-demo/apps/trusted-workforce-console/` (frontend in `app/`) | Authoritative Banking implementation reference; verify checkout revision against the selected hosted copy |
 | Atlas Banking copy | `wonderful-os-atlas/src/banking/` | Historical derivative of NAB; not the authoritative Banking OS source |
 | Earlier retail fork | `aeo-retail-atlas/` | Historical context; prefer the newer `retail-os/` implementation |
@@ -26,6 +26,8 @@ Use this copy when locating or inspecting Banking OS. Environment: USA demo (CLI
 **Retail OS:**
 `https://usa.app.demo.wonderful.ai/workspace/97cbe143-ad11-4e14-9532-9d40a116e2dd/apps/retail-os`
 
+On 2026-10-26, the active version was `1.0.77` (`7ec0839c-7ca4-49b7-852a-d86a5196eba4`). Its source-inclusive bundle supplied the actual company-wide Work overview and Tower connector styles used for the Automotive OS refinements. This records inspected provenance, not a permanent pin: resolve the current version and retrieve its source before a new build. Keep the complete CSS cascade and verify relevant imports.
+
 These URLs locate source apps, not the deployment destination for a new vertical. Resolve the new app's target environment and workspace separately from the launch inputs. Do not reuse the source apps' customer or resource IDs automatically.
 
 If these local paths are unavailable, discover the relevant source checkout or app through supported project/app tools and current app guidance. Search by app name rather than guessing resource IDs. If the source cannot be retrieved, continue research and reuse mapping while resolving retrieval. A token/screenshot mockup may be explicitly provisional, but does not satisfy the copied-OS deliverable. The token snapshot is not a substitute for source recovery or a complete runnable app template.
@@ -35,15 +37,18 @@ If these local paths are unavailable, discover the relevant source checkout or a
 | Concern | Retail files relative to `retail-os/` |
 | --- | --- |
 | App entry and console shell | `src/App.tsx`, `src/retail/RetailTower.tsx`, `src/retail/RetailWorkspace.tsx` |
-| Theme and appearance | `src/retail/ab/theme.css`, `src/retail/retail.css`, `src/useAtlasAppearance.ts` |
+| Theme and appearance | `src/retail/ab/theme.css`, `src/retail/console.css`, `src/retail/retail.css`, `src/useAtlasAppearance.ts` |
 | Workforce ring and filters | `src/retail/screens/TowerAgents.tsx`, `TowerAgentsFilter.tsx` |
+| Tower connection appearance | Full `src/retail/screens/tower.css` cascade plus imported console wrapper styles; see `design-and-motion.md` for the inspected stroke/glow/dot values |
 | Journey renderer and layout | `src/retail/screens/Tower.tsx`, `tower.css` |
 | Compact/docked journey details | `src/retail/JourneyOverview.tsx` and the detail-mode state in `screens/Tower.tsx` |
 | Org and role-based scope | `src/retail/screens/TowerOrg.tsx`, `org.ts`, `todayScope.ts`, `ViewerMenu.tsx` |
 | Passports | `src/retail/RetailPassport.tsx` and canonical architecture data |
 | Domain model | `src/retail/getRetailArchitecture.ts`, `retailExpansion.ts`, `retailFunctions.ts` |
 | Existing execution infrastructure (optional reuse; no new demo required) | `src/retail/data/retailDemo.ts`, `retailCaseContext.ts`, `RetailCaseExecution.tsx` |
-| Work, controls, audit | `src/retail/RetailWork.tsx`, `RetailControls.tsx`, `RetailAudit.tsx` |
+| Company-wide Work overview | `src/retail/RetailWorkOverview.tsx`, `src/retail/screens/work-overview.css`; see `work-overview.md` |
+| Main-view navigation and persistence | `src/retail/useRetailNavigation.ts`, `src/App.tsx` |
+| Work execution, controls, audit (separate from the overview) | `src/retail/RetailWork.tsx`, `RetailControls.tsx`, `RetailAudit.tsx` |
 | Case map, zoom, controls | `src/retail/CaseMap.tsx`, `screens/panzoom.ts`, `CanvasControls.tsx` |
 | Shared agent assets | `src/retail/ab/orbs/`, including spheres and the orb video |
 | Customer architecture normalization | `src/retail/aeoCommandCenter/getAeoJourneyMap.ts`, `getAeoCareJourney.ts` |

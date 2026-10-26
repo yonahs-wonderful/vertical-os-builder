@@ -1,8 +1,8 @@
 ---
 name: vertical-os-builder
-description: Clone and adapt the existing Banking OS or Retail OS into another industry OS, preserving their sphere behavior, ring alignment, shared components, and reusable journey flows. Research and adapt departments, teams, agents, and journey architecture. Build each real demo journey as a separate task. Use for requests such as Healthcare OS, Insurance OS, or another vertical OS, not an unrelated dashboard or operating-system installation.
+description: Clone and adapt the existing Banking OS or Retail OS into another industry OS, preserving their sphere behavior, ring alignment, Retail-style Tower connections, company-wide Work overview, shared components, and reusable journey flows. Research and adapt departments, teams, agents, and journey architecture. Build each real demo journey as a separate task. Use for requests such as Healthcare OS, Insurance OS, or another vertical OS, not an unrelated dashboard or operating-system installation.
 metadata:
-  version: "0.4.9"
+  version: "0.5.0"
   status: "draft"
 ---
 
@@ -10,7 +10,7 @@ metadata:
 
 Clone an existing Banking OS or Retail OS and adapt it to a new vertical. The source app is the implementation foundation: copy its actual components, sphere assets, ring geometry, alignment logic, interaction behavior, and useful journey flows. Change the industry model and content around that foundation. A similar-looking app rebuilt from scratch does not satisfy this skill.
 
-The deliverable is the vertical OS foundation: a researched workforce, clickable architecture and journey catalog, and the inherited OS experience. Building each real journey into a complete demo is a separate, explicitly scoped demo-preparation task. Do not make realistic cases, conversations, execution/replay controls, decision engines, or audit-history implementation a prerequisite here.
+The deliverable is the vertical OS foundation: a researched workforce, clickable architecture and journey catalog, a company-wide Work overview, and the inherited OS experience. Building each real journey into a complete demo is a separate, explicitly scoped demo-preparation task. Do not make realistic cases, conversations, execution/replay controls, decision engines, or audit-history implementation a prerequisite here.
 
 ## Expected inputs
 
@@ -86,7 +86,7 @@ All agent logos/spheres stay bright, colorful and fully opaque across Agents, Jo
 
 Include an explicit Light/Dark control in the top-right app header. Default to Light, remember the user's choice across reloads with an app-specific storage key, and keep the appearance scoped to this app. Apply both themes consistently to the shell, Agents/Journeys/Org, passports, menus, details and other app pages using inherited semantic tokens. Keep complete names readable and every worker colorful in both modes. Make the control keyboard accessible and reachable at mobile widths. See the design reference for theme coverage and persistence checks.
 
-Keep the default app navigation focused on Agents, Journeys and Org within the inherited Tower experience. Omit the standalone Brief and Controls tabs/pages unless the user explicitly requests them. When adapting or cleaning up an existing app, remove their navigation entries, imports, route/render branches and unused page components; hiding the tabs alone is insufficient. Keep the research workbook and source brief in the handoff, and show relevant ownership, policy and human-decision information in existing agent/journey details. This navigation simplification preserves working filters, appearance, zoom, motion and detail controls.
+Default navigation includes Tower (Agents, Journeys and Org) and Work, the company-wide activity overview. Omit the standalone Brief and Controls tabs/pages unless the user explicitly requests them. When adapting or cleaning up an existing app, remove their navigation entries, imports, route/render branches and unused page components; hiding the tabs alone is insufficient. Keep the research workbook and source brief in the handoff, and show relevant ownership, policy and human-decision information in existing agent/journey details. Preserve working filters, appearance, zoom, motion and detail controls.
 
 Reuse the console shell, Inter typography, theme tokens, cards, connectors, gates, popups, pan/zoom, filters, Agents/Journeys/Org views, and passports. Compare the fork with the source at matching viewport and zoom to catch visual or behavioral drift. Preserve inherited case/work infrastructure if useful, without requiring new working journeys or surfacing irrelevant source-customer cases.
 
@@ -94,7 +94,17 @@ Keep the Retail refinements: sequentially packed selected journeys with no empty
 
 Compute Active/Planned totals from catalog status. Reserve **working journeys** for verified implementations; Active demo labels and animation do not establish runnable cases or live integrations.
 
-## 5. Refine the inherited motion
+Preserve Retail's final Tower connector styling and full CSS cascade, including the source console styles. Selected agent connections use thin accent-colored curves, subtle accent glow and matching traveling dots. Avoid app overrides such as `stroke:currentColor` or thicker dark paths that replace the source treatment. Keep geometry and calm-state behavior intact; see the exact inspected values and comparison checks in [references/design-and-motion.md](references/design-and-motion.md).
+
+## 5. Include the company-wide Work overview
+
+Read [references/work-overview.md](references/work-overview.md). Reuse Retail's actual Work overview, department/team pulse cards, work-list structure, stylesheet and navigation persistence. Include this overview by default, even before individual journeys are implemented. If Banking is the base, bring in the Retail overview through an adapter to the target's canonical model.
+
+Show activity across the company: what agents are handling, where people are needed, exceptions and completed items. Department cards, summary counts, search, status filters and viewer scope all use the same work-item collection. Resolve agents, owners, departments, stages, human gates and colors through canonical identities. Preserve filters and Tower selection/camera when switching views, and suspend hidden-view motion.
+
+Until actual activity feeds are connected, use clearly labeled illustrative overview items with a persistent **Demo snapshot** label and a visible no-live-systems explanation. Example statuses do not change journey readiness, the saved Active architecture previews or working-journey counts. A working overview does not require clickable rows, flow drill-downs, conversations, execution/replay or new integrations; add those only within a separately requested scope.
+
+## 6. Refine the inherited motion
 
 First reproduce how the Banking/Retail spheres and connectors already move and respond. Then spend a focused pass enhancing shared presentation: sphere illumination, directional connector flow, selection depth, smooth focus/framing, and panel transitions. Apply small shared changes to the copied components rather than replacing their behavior or arrangement.
 
@@ -104,9 +114,9 @@ Keep the ring and labels spatially stable and the family recognizable. Inspect o
 
 Scenario-driven motion tied to real case execution belongs to the separately scoped journey demo work. It is not needed to complete the OS foundation.
 
-## 6. Verify and hand over the adapted OS
+## 7. Verify and hand over the adapted OS
 
-Use [references/acceptance.md](references/acceptance.md). Check the copied foundation, industry data, reuse map, sphere alignment and interactions, connected views, planned architecture previews, compact multi-selection, detail controls, and relevant build/package contracts. Compare source/fork at desktop, shared-screen width, mobile, keyboard and reduced motion. Check both Light and Dark, persisted choice after reload, and calm connection behavior in each theme. Record which checks actually ran.
+Use [references/acceptance.md](references/acceptance.md). Check the copied foundation, industry data, reuse map, sphere alignment and interactions, Retail connector fidelity, company-wide Work and its filters/scope, connected views, planned architecture previews, compact multi-selection, detail controls, and relevant build/package contracts. Compare source/fork at desktop, shared-screen width, mobile, keyboard and reduced motion. Check both Light and Dark, persisted choice after reload, and calm connection behavior in each theme. Record which checks actually ran.
 
 Deliver the adapted OS when requested, a concise research/source brief, the reuse/adaptation map, and its journey catalog with honest status. Note which journeys can become separate demo-preparation tasks and what remains to prepare for each at a high level. Do not create or execute those tasks unless asked.
 
