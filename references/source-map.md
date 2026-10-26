@@ -1,24 +1,34 @@
 # Design baseline and source map
 
-## Supply the source for this installation
+Local source inspected and hosted locators updated on 2026-10-21. The Banking URL below was supplied by the user; its deployed revision has not been compared with the local checkout. Resolve source and revision again before a new build. Source apps remain read-only during a fork.
 
-This skill adapts an existing Banking OS or Retail OS; it does not bundle those apps or grant access to them. Before building, obtain an authorized source checkout or source app locator from the person providing the OS foundation. Keep source apps read-only while creating the new vertical.
+## Locate the originals
 
-Record these inputs in the research workbook:
+The originating project root on Yonah's machine is:
 
-| Source input | What to provide |
-| --- | --- |
-| Source OS | Retail OS or the original Banking Trusted Workforce Console |
-| Source app | Its actual hosted app URL, or its environment/workspace and app name |
-| Source checkout | An accessible local directory or Git repository containing the app source and sphere assets |
-| Source revision | The checked-out commit and, where available, the matching deployed version |
-| Destination | The separate environment/workspace and new app identity requested by the user |
+`/Users/yonah.s/.wonderful-code/userdata/one-off-chats/c1ebe9409603697b`
 
-Use the original Banking console as the Banking reference; an Atlas-derived view is not the authoritative source. Prefer the current Retail source when its navigation and shared components fit the requested vertical. Retrieve or compare the actual source with the selected hosted app before claiming revision fidelity. A local checkout is not proof that it matches the currently deployed version.
+| Reference | Location within that root | Purpose |
+| --- | --- | --- |
+| Latest inspected Retail OS | `retail-os/` | Default clone base and interaction implementation; package version 1.0.11 at inspection |
+| Banking OS — NAB demo / Trusted Workforce Console | `research/nab/agentic-bank-demo/apps/trusted-workforce-console/` (frontend in `app/`) | Authoritative Banking implementation reference; verify checkout revision against the selected hosted copy |
+| Atlas Banking copy | `wonderful-os-atlas/src/banking/` | Historical derivative of NAB; not the authoritative Banking OS source |
+| Earlier retail fork | `aeo-retail-atlas/` | Historical context; prefer the newer `retail-os/` implementation |
+| AEO Command Center source | `research/aeo-command-center/` | Example of a customer architecture imported into a common journey format |
 
-Resolve supplied names through supported project/app tools and the current Wonderful Apps guidance. Do not guess tenant/workspace IDs or use a source app as the new app's destination. If source access is missing, continue research and reuse mapping while obtaining it. A token/screenshot mockup may be explicitly provisional, but does not satisfy the copied-OS deliverable.
+### Hosted app references
 
-The paths below are implementation landmarks from the source family. Some checkouts place the frontend under `app/`; inspect actual imports and repository instructions to resolve the current layout.
+**Banking OS — user-supplied copy of the NAB demo's Trusted Workforce Console:**
+`https://usa.app.demo.wonderful.ai/workspace/179893f9-710b-4355-bcb5-9b9eeef1afb3/apps/trusted-workforce-console`
+
+Use this copy when locating or inspecting Banking OS. Environment: USA demo (CLI profile `usa`); source workspace locator: `179893f9-710b-4355-bcb5-9b9eeef1afb3`; app slug: `trusted-workforce-console`. Resolve the current app identity through supported tools. The local NAB checkout above is an implementation reference, not a claim that it matches the currently deployed copy byte for byte. Compare or retrieve the relevant source before selecting a revision for cloning.
+
+**Retail OS:**
+`https://usa.app.demo.wonderful.ai/workspace/97cbe143-ad11-4e14-9532-9d40a116e2dd/apps/retail-os`
+
+These URLs locate source apps, not the deployment destination for a new vertical. Resolve the new app's target environment and workspace separately from the launch inputs. Do not reuse the source apps' customer or resource IDs automatically.
+
+If these local paths are unavailable, discover the relevant source checkout or app through supported project/app tools and current app guidance. Search by app name rather than guessing resource IDs. If the source cannot be retrieved, continue research and reuse mapping while resolving retrieval. A token/screenshot mockup may be explicitly provisional, but does not satisfy the copied-OS deliverable. The token snapshot is not a substitute for source recovery or a complete runnable app template.
 
 ## Inspect these files for a fork
 
@@ -36,13 +46,13 @@ The paths below are implementation landmarks from the source family. Some checko
 | Work, controls, audit | `src/retail/RetailWork.tsx`, `RetailControls.tsx`, `RetailAudit.tsx` |
 | Case map, zoom, controls | `src/retail/CaseMap.tsx`, `screens/panzoom.ts`, `CanvasControls.tsx` |
 | Shared agent assets | `src/retail/ab/orbs/`, including spheres and the orb video |
-| Customer architecture normalization | The source app's customer-architecture adapters |
+| Customer architecture normalization | `src/retail/aeoCommandCenter/getAeoJourneyMap.ts`, `getAeoCareJourney.ts` |
 
 In the grouped file rows, unprefixed sibling filenames are in the same folder as the first file. Verify actual imports before copying; the source may evolve.
 
-For Banking inspect the original Trusted Workforce Console, relative to its repository root:
+For Banking inspect the NAB console, relative to `research/nab/agentic-bank-demo/apps/trusted-workforce-console/`:
 
-| Concern | Banking source |
+| Concern | NAB Banking source |
 | --- | --- |
 | App identity and frontend package | `wonderful.json`, `app/package.json` |
 | App shell and Tower entry | `app/src/App.tsx`, `app/src/screens/TowerScreen.tsx` |
@@ -55,7 +65,7 @@ For Banking inspect the original Trusted Workforce Console, relative to its repo
 | Model and console data | `app/src/data/types.ts`, `app/src/data/useConsoleData.ts`, `shared/console/demo-seed.ts` |
 | Existing case infrastructure (optional reuse) | `app/src/screens/CaseScreen.tsx` |
 
-The Atlas `src/banking/` files use different wrapper names and local replay behavior. Do not mistake that derivative for the original Banking implementation or use its synthetic execution behavior as evidence of what the selected hosted Banking copy runs.
+The Atlas `src/banking/` files use different wrapper names and local replay behavior. Do not mistake that derivative for the NAB implementation or use its synthetic execution behavior as evidence of what the hosted NAB copy runs.
 
 ## Reuse and adaptation rules
 

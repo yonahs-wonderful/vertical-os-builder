@@ -22,7 +22,7 @@ Read these from the launch prompt and existing conversation. Use [assets/launch-
 | `target_environment` | Required for a hosted deliverable: environment/profile or tenant name plus destination workspace name; alternatively, explicitly request local-only work. Resolve names through supported tools rather than asking for opaque IDs. |
 | `industry_scope` | Strongly recommended: segment, geography/jurisdiction, business model and audience, such as US property & casualty insurance. Research and state assumptions when omitted; clarify if competing interpretations materially change the operating model. |
 | `app_name` / `app_slug` | Optional: default to a distinct new industry app, such as Insurance OS / insurance-os. An existing matching app is not permission to overwrite it. |
-| `source_os` | Optional: Banking, Retail, or auto. Auto chooses the closest existing source and reuses useful parts of the other. Supply an accessible source checkout or app locator as described in the source map. |
+| `source_os` | Optional: Banking, Retail, or auto. Auto chooses the closest existing source and reuses useful parts of the other. Source locators are in the source map. |
 | `delivery` | State plan/research only, local build/preview, or create/publish/activate in the named destination. Follow explicit task authorization; absent a publication request, complete research/build work without publishing. |
 | `customer` / `constraints` | Optional: named customer, supplied material, branding, priority journeys and required exclusions. Default to a generic industry model with documented assumptions. |
 
@@ -32,13 +32,13 @@ Before any hosted creation or publication, resolve and verify the supplied desti
 
 ## Availability and handoff
 
-This is a global Wonderful Code skill. New chats using the same profile can invoke `$vertical-os-builder`; the editable copy is under the active Wonderful Code home's `skills/vertical-os-builder/` directory. Transfer the entire skill folder, including references and assets, when using a different profile or machine. The skill folder contains source-discovery guidance rather than the Banking/Retail app source itself; verify that the receiving environment can access the actual source checkout or retrieve it through supported app tools.
+This is a global Wonderful Code skill. New chats using the same profile can invoke `$vertical-os-builder`; the editable copy is under the active Wonderful Code home's `skills/vertical-os-builder/` directory. Transfer the entire skill folder, including references and assets, when using a different profile or machine. The skill folder contains source locators rather than the Banking/Retail app source itself; verify that the receiving environment can access the actual source checkout or retrieve it through supported app tools.
 
 ## 1. Choose and clone the existing OS
 
 Extract the target vertical, customer, geography, audience, destination, and scope from the conversation and available files. State useful assumptions and continue. A request to revise this skill or produce a plan does not authorize a new app build.
 
-Read [references/source-map.md](references/source-map.md) and resolve the authorized hosted app or source checkout supplied for this installation. Banking OS means the original Trusted Workforce Console; the Atlas Banking view is a derivative, not the authoritative Banking source. Locate the actual source, verify its relationship to the selected hosted reference, record its revision, and choose the closest existing OS as the base. Prefer current Retail for its navigation refinements; use Banking when its flows and structure fit better. Reuse selected components or flows from the other OS where useful.
+Read [references/source-map.md](references/source-map.md), which includes both hosted app URLs and local source locators. Banking OS means the NAB demo's Trusted Workforce Console, using the user-supplied USA hosted copy recorded there; the Atlas Banking view is a derivative, not the authoritative Banking source. Locate the actual source, verify its relationship to the selected hosted reference, record its revision, and choose the closest existing OS as the base. Prefer current Retail for its navigation refinements; use Banking when its flows and structure fit better. Reuse selected components or flows from the other OS where useful.
 
 Copy/fork the source app into its own destination and confirm the unchanged copy builds before adapting it. Keep source apps and tenant resources read-only. Preserve dependencies, shared renderers, styles, sphere assets/animation, layout calculations, filtering, zoom, and navigation. Avoid creating a new shell, sphere component, ring layout engine, or journey renderer when the source already provides one.
 
